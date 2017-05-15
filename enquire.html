@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Enquiry Page" />
+    <meta name="keywords" content="HTML5, tags" />
+    <meta name="author" content="Pushkar Bhattarai"  />
+    <title>Enquiry Page</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />    
+    <script src="scripts/part2.js"></script>
+</head>
+<body>
+<!--***HEADER***-->     
+    <header>
+        <p>Online Pizza Purchase</p> 
+    </header>
+<!--***NAVIGATION***-->     
+    <nav class="w3-container" id="mynav">
+        <div class="w3-bar w3-black">
+            <a href="index.html" class="w3-bar-item w3-button w3-mobile">Home</a>
+            <a href="product.html" class="w3-bar-item w3-button w3-mobile">Product</a>
+            <a href="enquire.html" class="w3-bar-item w3-button w3-mobile">Enquire</a>
+            <a href="about.html" class="w3-bar-item w3-button w3-mobile">About</a>
+            <a href="enhancements.html" class="w3-bar-item w3-button w3-mobile">Enhancements</a>
+            <a href="enhancements2.html" class="w3-bar-item w3-button w3-mobile">Enhancements 2</a>
+        </div>
+    </nav>
+<!--***ARTICLE***-->    
+    <section>
+        <h2>Enquiry Form</h2>
+        <form id="orderform" action="payment.html"   >
+            <p>
+                <!--FirstName--> 
+                <label for="firstname">First Name</label> <input type="text" name="First Name" id="firstname" maxlength="25" 
+                    required="required" pattern="^[A-Za-z- ]+$" placeholder="Your First Name" />
+            </p>
+            <p>
+                <!--LastName--> 
+                <label for="lastname">Last Name</label> <input type="text" name="Last Name" id="lastname" maxlength="25" 
+                    required="required" pattern="^[A-Za-z- ]+$" placeholder="Your Last Name" />
+            </p>     
+            <p>
+                <!--LastName--> 
+                <label for="email">Email</label> <input type="email" name="Email" id="email" 
+                    required="required"  placeholder="Your Email Address" />
+            </p>                     
+            <fieldset>
+                <!--Address--> 
+                <legend>Address</legend>
+                <p>
+                    <label for="street">Street Address</label> <input type="text" name="Street" id="street" maxlength="40" 
+                    required="required" placeholder="street address" />
+                </p>
+                <p>    
+                    <label for="suburb">Suburb/Town</label> <input type="text" name="Suburb" id="suburb" maxlength="20" 
+                    required="required" placeholder="suburb/town address" />
+                </p>
+                <p>
+                    <label for="state">State</label>
+                    <select id="state" name="State">
+                        <option value="VIC">VIC</option>
+                        <option value="NSW">NSW</option>
+                        <option value="QLD">QLD</option>
+                        <option value="NT">NT</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>  
+                        <option value="ACT">ACT</option>                                                                                                                                              
+                    </select>   
+                </p>  
+                <p>                  
+                    <label for="postal">Postal Code</label> <input type="text" name="Postal Code" id="postal" maxlength="4" 
+                    minlength="4" required="required" pattern="^[0-9]+$" placeholder="4 digit postal code" />                                        
+                </p>                 
+            </fieldset>
+            <!--Preferred Contact-->
+            <fieldset>
+                <legend>Preferred contact</legend>
+                <label for="pc1">Email<input type="radio" id="pc1" name="Preferred_Contact[]" value="email" checked="checked" /></label>
+                <label for="pc2">Post<input type="radio" id="pc2" name="Preferred_Contact[]" value="post"/></label>
+                <label for="pc3">Phone<input type="radio" id="pc3" name="Preferred_Contact[]" value="phone"/></label>                
+            </fieldset>
+            <!--Phone-->
+            <p>    
+                <label for="phone">Phone Number</label> <input type="text" name="Phone" id="phone" maxlength="10" 
+                required="required" placeholder="10 digit phone number" />
+            </p>  
+            <!--Product or Service--> 
+            <fieldset>
+                <legend>Pizza Types</legend>
+                <label for="product1">Veg Mushroom | price: 11$ 
+                    <input type="radio" id="product1" name="product[]" value="Veg Mushroom" />
+                </label><br/>
+                <label for="product2">Veg Paneer | price: 12$ 
+                    <input type="radio" id="product2" name="product[]" value="Veg Paneer"/>
+                </label><br/>
+                <label for="product3">Non-veg Chicken | price: 16$ 
+                    <input type="radio" id="product3" name="product[]" value="Non-veg Chicken"/>
+                </label><br/>   
+                <label for="product4">Non-veg Mutton | price: 18$ 
+                    <input type="radio" id="product4" name="product[]" value="Non-veg Mutton"/>
+                </label><br/>
+                <label for="quantity">Quantity: 
+                    <input type="text" id="quantity" name="Quantity" maxlength="10" required="required" placeholder="0" />
+                </label>              
+            </fieldset>
+            <fieldset>
+                <legend>Extras | Price: 2$ for each extras</legend>
+                <label for="extra1">Barbeque Sause 
+                    <input type="checkbox" id="extra1" name="extra[]" value="Barbeque Sause" />
+                </label> 
+                <label for="extra2">Onion Rings 
+                    <input type="checkbox" id="extra2" name="extra[]" value="Onion Rings" />
+                </label>      
+                <label for="extra3">Shedder Cheese 
+                    <input type="checkbox" id="extra3" name="extra[]" value="Shedder Cheese" />
+                </label>                                          
+            </fieldset>            
+            <p>
+                <label for="comments">Comments (if any)</label><br/>
+                <textarea id="comments" cols="50" name="comments"  placeholder="any comments on interested products" ></textarea>  
+            </p>
+            <p>
+                <input type="submit" value="Pay Now"/>
+                <input type="reset" value="Reset" />
+            </p>                             
+        </form>
+    </section>
+<!--***FOOTER***-->      
+    <footer>
+        <p>Author: Pushkar Bhattarai <a href="mailto:101041453@student.swin.edu.au">Email</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,201 @@
+/*
+filename: style.css
+author: Pushkar Bhattarai
+created: 28-03-2017
+last modified: 29-03-2017
+description: css page
+*/
+body{
+    /*Load background image*/
+    background-image: url(..\\styles/images/background2.jpg);
+    background-repeat: repeat-x;
+}
+/*Header*/
+header{
+    width: 70%;
+    height: 125px;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-image: url(..\\styles/images/header.jpg);
+    background-position: 0;
+    padding-top: 50px;
+    overflow: hidden;
+}
+/*Decendents Example*/
+header p{
+    color:floralwhite;   
+    font:italic bold 30px Georgia, serif;
+    margin-left: 25px;
+}       
+
+/***NAVIGATION MENU***/
+#mynav{
+    margin-left: 15%;
+    width: 70%;
+    background-color: #404040;
+}
+
+/*Parent/Child Example*/
+nav > a{
+    text-decoration: none;
+    display: inline-table;
+    color: white;
+    white-space: normal;
+    margin-left: 50px;
+    margin-top: 8px;
+}
+    /*Pseudo Class*/
+nav > a:hover{
+    color: red;
+}
+/****CONTENTS****/
+/***Index***/
+section{    
+    overflow: hidden;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%; 
+    background-color: antiquewhite;    
+}
+section h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    margin-left: 7px;
+}
+section h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    margin-left: 10px;
+}
+section p{
+    font-family: calibri;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+}
+/****Product****/
+article{
+    float: left;
+    width: 75%;
+}
+img{/*top right bottom left*/
+    float: right;
+    margin: 10px 10px 10px 10px;
+}
+aside{
+    float: right;
+    width: 24%;
+    margin-left: 3px;
+    border-left: 1px;
+    border-left-width: 1px;
+    border-left-style: solid;
+}
+aside p{
+    font-family: calibri;
+    font-size: 16px;
+    text-align: justify;
+    margin: 10px 5px 0px 5px;
+}
+div h4,div h5,div p{
+    margin-left: 20px;
+}
+table{
+    margin-left: 15px;
+    width: 200px;
+}
+caption{
+    background-color: #FF1E22;
+    font-weight: bolder;
+}
+th{/*--Heading color--*/
+    background-color: darkorange;   
+}
+td{/*--Data color--*/
+    background-color: beige;        
+} 
+#refer{/*References*/
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+    color: blue;
+}
+/****Enquiry****/
+section fieldset{         
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/****About****/
+dl {
+  overflow: hidden;
+  padding: 0;
+  margin-left: 8px;
+}
+dt {
+  float: left;
+  width: 100px;
+  padding: 0;
+  margin: 0
+}
+dd {
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+figure img{
+    float: right;
+    border:5px double black;  
+}
+dl a{
+    text-decoration: none;
+    color: #FF8C00;
+    font-weight: bold;
+}
+dl a:hover{                 /*Enhancements...Pseudoclass*/
+    color: #FF1E22;
+}
+table.requirements{
+    width: 500px;
+}
+section a{
+    text-decoration: none;
+    color: #FF8C00;
+    font-weight: bold;
+}
+section a:hover{
+    color: #FF1E22;
+}
+/****Footer****/
+footer{
+    float: right;
+    width: 70%;
+    margin-right: 15%;     
+    margin-left: 15%;   
+    background-color: #404040;
+    text-align: center;
+    height: 25px;    
+}
+/*Decorating Footer*/
+footer p{
+    font-family: calibri;
+    font-size: 14px;
+    font-weight: 300;    
+    word-spacing: 3px;
+    margin-top: 3px;
+    color: white;
+}
+footer a{
+    text-decoration: none;
+    color: #DCDCDC;
+    font-weight: bold;
+}
+/*use of psuedo class*/
+footer a:hover{
+    color: 	#FF8C00;
+}
+/*Part 2 extra addition*/
+span{
+    margin-left: 30px;
+}
+#totalPrice{
+    font: normal bolder 18px arial, serif;
+    color: orangered;
+}

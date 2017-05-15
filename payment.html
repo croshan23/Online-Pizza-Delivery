@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Payment Page of the Website" />
+    <meta name="keywords" content="HTML5, tags" />
+    <meta name="author" content="Pushkar Bhattarai"  />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Payment Page</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="scripts/enhancements.js"></script>
+    <script src="scripts/part_2.js"></script>
+    
+</head>
+<body>
+<!--***HEADER***-->     
+    <header>
+        <p>Online Pizza Purchase</p> 
+    </header>
+<!--***NAVIGATION***-->     
+    <nav class="w3-container" id="mynav">
+        <div class="w3-bar w3-black">
+            <a href="index.html" class="w3-bar-item w3-button w3-mobile">Home</a>
+            <a href="product.html" class="w3-bar-item w3-button w3-mobile">Product</a>
+            <a href="enquire.html" class="w3-bar-item w3-button w3-mobile">Enquire</a>
+            <a href="about.html" class="w3-bar-item w3-button w3-mobile">About</a>
+            <a href="enhancements.html" class="w3-bar-item w3-button w3-mobile">Enhancements</a>
+            <a href="enhancements2.html" class="w3-bar-item w3-button w3-mobile">Enhancements 2</a>
+        </div>
+    </nav>
+<!--***ARTICLE***-->    
+    <section>
+        <h2>Your Order</h2>
+        <div>
+            <h4>User Details</h4>
+            <span>Name: </span><span id="fullName"></span><br/>
+            <span>Phone: </span><span id="forPhone"></span><br/>
+            <span>Address: </span><span id="forAdd"></span><br/>
+        </div>        
+        <div>
+            <h4>Order Details</h4>
+            <span>Pizza: </span><span id="forPizza"></span><br/>
+            <span>Quantity: </span><span id="forQty"></span><br/>
+            <span>Number of Extras: </span><span id="forExt"></span><br/>
+            <p id="totalPrice">Total Price: <span id="forPrice"></span>$ AUD</p>
+        </div>
+        <div>
+            <form id="paymentform" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php"   >
+                <h2>Payment Information</h2>
+                <p>
+                    <label for="cardType1">Visa <input type="radio" id="cardType1" name="cardType[]" value="VISA" /></label>
+                    <label for="cardType2">Master Card <input type="radio" id="cardType2" name="cardType[]" value="MASTER_CARD" /></label>
+                    <label for="cardType3">American Express <input type="radio" id="cardType3" name="cardType[]" value="AMERICAN_EXPRESS" /></label>
+                </p>
+                <p>
+                    <label for="nameInCard">Name on Credit Card</label> <input type="text" name="Name on Credit Card" id="nameInCard" 
+                        maxlength="40" required="required" pattern="^[A-Za-z- ]+$" placeholder="Name on Credit Card" />                    
+                </p>
+                <p>    
+                    <label for="cardNumber">Credit Card Number</label> <input type="text" name="Credit Card Number" id="cardNumber" 
+                        required="required" placeholder="Credit Card Number" />
+                </p>
+                <p>    
+                    <label for="expiryDate">Expiry Date</label> <input type="text" name="Expiry Date" id="expiryDate" 
+                        maxlength="5" required="required" placeholder="mm-yy" size="8" />
+                </p>                                
+                <p>    
+                    <label for="cvv">Card Verification Value</label> <input type="text" name="Card Verification Value" id="cvv" 
+                        maxlength="4" required="required" placeholder="cvv" size="6" />
+                </p>         
+                <p>
+                    <input type="submit" value="Check Out"/>
+                    <button id="onCancel">Cancel Order</button>
+                </p>                        
+            </form>           
+        </div>
+    </section>
+<!--***FOOTER***-->      
+    <footer>
+        <p>Author: Pushkar Bhattarai <a href="mailto:101041453@student.swin.edu.au">Email</a></p>
+    </footer>
+</body>
+</html>
